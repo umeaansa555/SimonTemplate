@@ -90,7 +90,8 @@ namespace SimonSays
                 // add one to the guess variable
 
             //if (int i = guess; i < Form1.pattern.Count(i); if)
-            //{
+            if (Form1.pattern[guess] == 0)
+            {
                 greenButton.BackColor = Color.Green;
                 SoundPlayer correctSound = new SoundPlayer(Properties.Resources.green);
                 correctSound.Play();
@@ -98,14 +99,37 @@ namespace SimonSays
                 Thread.Sleep(400);
                 greenButton.BackColor= Color.DarkGreen;
                 guess++;
-            //}
+            }
+            //does not equal: !=
                 
              
             //TODO:check to see if we are at the end of the pattern, (guess is the same as pattern list count).
                 // call ComputerTurn() method
                 // else call GameOver method
+                if (guess == Form1.pattern.Count())
+            {
+                ComputerTurn();
+            }
+            else
+            {
+                GameOver();
+            }
         }
 
+        private void redButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blueButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yellowButton_Click(object sender, EventArgs e)
+        {
+
+        }
         public void GameOver()
         {
             //TODO: Play a game over sound
@@ -124,5 +148,6 @@ namespace SimonSays
         {
             
         }
+
     }
 }
