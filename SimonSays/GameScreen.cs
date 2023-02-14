@@ -21,6 +21,11 @@ namespace SimonSays
         public GameScreen()
         {
             InitializeComponent();
+            Form1.pattern.Add(0);
+            Form1.pattern.Add(1);
+            Form1.pattern.Add(2);
+            Form1.pattern.Add(3);
+
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
@@ -43,7 +48,34 @@ namespace SimonSays
             Form1.pattern.Add(newPattern);
             //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
 
+            //switch (colorLight) 
+            //{
+            //    case 0: greenButton.BackColor = Color.LawnGreen; break;
+            //    case 1: redButton.BackColor = Color.Red; break;
+            //    case 2: blueButton.BackColor = Color.Blue; break;
+            //    case 3: yellowButton.BackColor = Color.Yellow; break;
+            //}
+
+            for (int i = 0; i < Form1.pattern.Count(); i++)
+            {
+                if (newPattern == 0)
+                { greenButton.BackColor = Color.LawnGreen; }
+                else if (newPattern == 1)
+                { redButton.BackColor = Color.Red; }
+                else if (newPattern == 2)
+                { blueButton.BackColor = Color.Blue; }
+                else if (newPattern == 3)
+                { yellowButton.BackColor = Color.Yellow; }
+                Thread.Sleep(400);
+                greenButton.BackColor = Color.DarkGreen;
+                redButton.BackColor = Color.DarkRed;
+                blueButton.BackColor = Color.DarkBlue;
+                yellowButton.BackColor = Color.Goldenrod;
+                Thread.Sleep(400);
+
+            }
             //TODO: set guess value back to 0
+            guess = 0;
         }
 
         //TODO: create one of these event methods for each button
@@ -56,6 +88,18 @@ namespace SimonSays
                 // pause
                 // set button colour back to original
                 // add one to the guess variable
+
+            //if (int i = guess; i < Form1.pattern.Count(i); if)
+            //{
+                greenButton.BackColor = Color.Green;
+                SoundPlayer correctSound = new SoundPlayer(Properties.Resources.green);
+                correctSound.Play();
+                Refresh();
+                Thread.Sleep(400);
+                greenButton.BackColor= Color.DarkGreen;
+                guess++;
+            //}
+                
              
             //TODO:check to see if we are at the end of the pattern, (guess is the same as pattern list count).
                 // call ComputerTurn() method
@@ -65,9 +109,15 @@ namespace SimonSays
         public void GameOver()
         {
             //TODO: Play a game over sound
+            SoundPlayer endSound = new SoundPlayer(Properties.Resources.mistake);
 
             //TODO: close this screen and open the GameOverScreen
+            GameOverScreen gos = new GameOverScreen();
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+            f.Controls.Add(gos);
 
+            gos.Location = new Point((f.Width - gos.Width) / 2, (f.Height - gos.Height) / 2);
         }
 
         private void engine_Tick(object sender, EventArgs e)
