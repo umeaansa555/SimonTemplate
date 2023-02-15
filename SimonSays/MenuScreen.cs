@@ -32,6 +32,7 @@ namespace SimonSays
         private void exitButton_Click(object sender, EventArgs e)
         {
             //TODO: end the application
+            Application.Exit();
         }
     }
 }
