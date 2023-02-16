@@ -61,6 +61,36 @@ namespace SimonSays.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] _033___Laser_Hockey___Intro {
+            get {
+                object obj = ResourceManager.GetObject("_033___Laser_Hockey___Intro", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] _034___Laser_Hockey {
+            get {
+                object obj = ResourceManager.GetObject("_034___Laser_Hockey", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] _039___Laser_Hockey___Results {
+            get {
+                object obj = ResourceManager.GetObject("_039___Laser_Hockey___Results", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream blue {

@@ -13246,4 +13246,14 @@
         sR9KKKAKhlduCxI+tJRRQBoiJMfcH5UvCjAGBRRQBXumZQu0kfSqplc8FiR9aKKAExRRRQB//9k=
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_033___Laser_Hockey___Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\033 - Laser Hockey - Intro.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_034___Laser_Hockey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\034 - Laser Hockey.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_039___Laser_Hockey___Results" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\039 - Laser Hockey - Results.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

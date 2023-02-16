@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.Drawing.Drawing2D;
 using System.Threading;
+using System.IO;
 
 namespace SimonSays
 {
@@ -25,7 +26,8 @@ namespace SimonSays
             Form1.pattern.Add(1);
             Form1.pattern.Add(2);
             Form1.pattern.Add(3);
-
+            Form1.bgm.Play();
+            
         }
 
         private void GameScreen_Load(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 using System.Drawing.Drawing2D;
+using System.IO;
 
 namespace SimonSays
 {
@@ -16,10 +17,14 @@ namespace SimonSays
     {
         //TODO: create a List to store the pattern. Must be accessable on other screens
         public static List<int> pattern = new List<int>();
+        public static System.Windows.Media.MediaPlayer bgm = new System.Windows.Media.MediaPlayer();
+        
 
         public Form1()
         {
             InitializeComponent();
+            bgm.Open(new Uri(Application.StartupPath + "/Resources.034 - Laser Hockey.mp3"));
+            bgm.MediaEnded += new EventHandler(bgm_MediaEnded);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,6 +35,14 @@ namespace SimonSays
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
             this.Controls.Add(ms);
 
+            bgm.Play();
         }
+
+        public static void bgm_MediaEnded (object sender, EventArgs e)
+        {
+            bgm.Stop();
+            bgm.Play();
+        }
+
     }
 }
