@@ -21,21 +21,21 @@ namespace SimonSays
         public GameScreen()
         {
             InitializeComponent();
-            //Form1.pattern.Add(0);
-            //Form1.pattern.Add(1);
-            //Form1.pattern.Add(2);
-            //Form1.pattern.Add(3);
+            Form1.pattern.Add(0);
+            Form1.pattern.Add(1);
+            Form1.pattern.Add(2);
+            Form1.pattern.Add(3);
 
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
             //TODO: clear the pattern list from form1
-             Form1.pattern.Clear();
+            Form1.pattern.Clear();
             //TODO: refresh
             Refresh();
             //TODO: pause for a bit
-             Thread.Sleep(400);
+            Thread.Sleep(800);
             //TODO: run ComputerTurn()
             ComputerTurn();
         }
@@ -85,7 +85,7 @@ namespace SimonSays
                 //Refresh();
                 //Thread.Sleep(400);
 
-                greenButton.BackColor = Color.DarkGreen;
+                greenButton.BackColor = Color.ForestGreen;
                 redButton.BackColor = Color.DarkRed;
                 blueButton.BackColor = Color.DarkBlue;
                 yellowButton.BackColor = Color.Goldenrod;
@@ -116,7 +116,7 @@ namespace SimonSays
                 greenSound.Play();
                 Refresh();
                 Thread.Sleep(400);
-                greenButton.BackColor = Color.DarkGreen;
+                greenButton.BackColor = Color.ForestGreen;
                 guess++;
             }
             else if (Form1.pattern[guess] != 0)
@@ -151,6 +151,11 @@ namespace SimonSays
             {
                 GameOver();
             }
+
+            if (guess == Form1.pattern.Count())
+            {
+                ComputerTurn();
+            }
         }
 
         private void blueButton_Click(object sender, EventArgs e)
@@ -169,24 +174,35 @@ namespace SimonSays
             {
                 GameOver();
             }
-        }
-            private void yellowButton_Click(object sender, EventArgs e)
-        {
-                if (Form1.pattern[guess] == 3)
-                {
-                    yellowButton.BackColor = Color.Yellow;
-                    SoundPlayer yellowSound = new SoundPlayer(Properties.Resources.yellow);
-                    yellowSound.Play();
-                    Refresh();
-                    Thread.Sleep(400);
-                    yellowButton.BackColor = Color.Goldenrod;
-                    guess++;
-                }
-                else
-                {
-                    GameOver();
-                }
+
+            if (guess == Form1.pattern.Count())
+            {
+                ComputerTurn();
             }
+        }
+
+        private void yellowButton_Click(object sender, EventArgs e)
+        {
+            if (Form1.pattern[guess] == 3)
+            {
+                yellowButton.BackColor = Color.Yellow;
+                SoundPlayer yellowSound = new SoundPlayer(Properties.Resources.yellow);
+                yellowSound.Play();
+                Refresh();
+                Thread.Sleep(400);
+                yellowButton.BackColor = Color.Goldenrod;
+                guess++;
+            }
+            else
+            {
+                GameOver();
+            }
+
+            if (guess == Form1.pattern.Count())
+            {
+                ComputerTurn();
+            }
+        }
         public void GameOver()
         {
             //TODO: Play a game over sound
