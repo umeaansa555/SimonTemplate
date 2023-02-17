@@ -26,12 +26,7 @@ namespace SimonSays
         private void closeButton_Click(object sender, EventArgs e)
         {
             //TODO: close this screen and open the MenuScreen
-            MenuScreen ms = new MenuScreen();
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
-            f.Controls.Add(ms);
-
-            ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2);
+            Form1.ChangeScreen(this, new MenuScreen());
         }
     }
 }

@@ -211,12 +211,7 @@ namespace SimonSays
             SoundPlayer endSound = new SoundPlayer(Properties.Resources.mistake);
 
             //TODO: close this screen and open the GameOverScreen
-            GameOverScreen gos = new GameOverScreen();
-            Form f = this.FindForm();
-            f.Controls.Remove(this);
-            f.Controls.Add(gos);
-
-            gos.Location = new Point((f.Width - gos.Width) / 2, (f.Height - gos.Height) / 2);
+            Form1.ChangeScreen(this, new GameOverScreen());
         }
 
         private void engine_Tick(object sender, EventArgs e)

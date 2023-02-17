@@ -30,12 +30,7 @@ namespace SimonSays
         private void Form1_Load(object sender, EventArgs e)
         {
             //TODO: Launch MenuScreen
-            MenuScreen ms = new MenuScreen();
-
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-            this.Controls.Add(ms);
-
-            bgm.Play();
+            ChangeScreen(this, new MenuScreen());
         }
 
         public static void bgm_MediaEnded (object sender, EventArgs e)
@@ -43,6 +38,26 @@ namespace SimonSays
             bgm.Stop();
             bgm.Play();
         }
+        public static void ChangeScreen(object sender, UserControl next)
 
+        {
+            Form f; 
+            if (sender is Form)
+            {
+                f = (Form)sender;
+            }
+
+            else
+            {
+                UserControl current = (UserControl)sender;
+                f = current.FindForm();
+                f.Controls.Remove(current);
+            }
+
+            next.Location = new Point((f.ClientSize.Width - next.Width) / 2, (f.ClientSize.Height - next.Height) / 2);
+
+            f.Controls.Add(next);
+            next.Focus();
+        }
     }
 }
