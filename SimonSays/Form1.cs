@@ -33,13 +33,7 @@ namespace SimonSays
             ChangeScreen(this, new MenuScreen());
         }
 
-        public static void bgm_MediaEnded (object sender, EventArgs e)
-        {
-            bgm.Stop();
-            bgm.Play();
-        }
         public static void ChangeScreen(object sender, UserControl next)
-
         {
             Form f; 
             if (sender is Form)
@@ -58,6 +52,12 @@ namespace SimonSays
 
             f.Controls.Add(next);
             next.Focus();
+        }
+
+        public static void bgm_MediaEnded(object sender, EventArgs e)
+        {
+            bgm.Stop();
+            bgm.Play();
         }
     }
 }

@@ -22,10 +22,6 @@ namespace SimonSays
         public GameScreen()
         {
             InitializeComponent();
-            Form1.pattern.Add(0);
-            Form1.pattern.Add(1);
-            Form1.pattern.Add(2);
-            Form1.pattern.Add(3);
             Form1.bgm.Play();
             
         }
