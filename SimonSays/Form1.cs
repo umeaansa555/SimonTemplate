@@ -10,6 +10,7 @@ using System.Threading;
 using System.Media;
 using System.Drawing.Drawing2D;
 using System.IO;
+using WMPLib;
 
 namespace SimonSays
 {
@@ -17,7 +18,8 @@ namespace SimonSays
     {
         //TODO: create a List to store the pattern. Must be accessable on other screens
         public static List<int> pattern = new List<int>();
-        public static System.Windows.Media.MediaPlayer bgm = new System.Windows.Media.MediaPlayer();
+         public static System.Windows.Media.MediaPlayer bgm = new System.Windows.Media.MediaPlayer();
+         
         
 
         public Form1()
