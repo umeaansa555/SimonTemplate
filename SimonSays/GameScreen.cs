@@ -23,8 +23,8 @@ namespace SimonSays
         {
             InitializeComponent();
             Form1.bgm.Play();
-            Form1.bgm.settings.autoStart = true;
-            Form1.bgm.settings.setMode("loop", true);
+            //Form1.bgm.settings.autoStart = true;
+            //Form1.bgm.settings.setMode("loop", true);
             Form1.bgm.Volume = 5;
 
         }

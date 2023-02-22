@@ -10,7 +10,7 @@ using System.Threading;
 using System.Media;
 using System.Drawing.Drawing2D;
 using System.IO;
-using WMPLib;
+//using WMPLib;
 
 namespace SimonSays
 {
@@ -25,7 +25,9 @@ namespace SimonSays
         public Form1()
         {
             InitializeComponent();
-            bgm.Open(new Uri(Application.StartupPath + "/Resources.034 - Laser Hockey.mp3"));
+            bgm.Open(new Uri(Application.StartupPath + "/Resources/034 - Laser Hockey.mp3"));
+            
+            // bgm.Play();
             bgm.MediaEnded += new EventHandler(bgm_MediaEnded);
         }
 
