@@ -209,6 +209,8 @@ namespace SimonSays
             //TODO: Play a game over sound
             SoundPlayer endSound = new SoundPlayer(Properties.Resources.mistake);
 
+            Form1.bgm.Stop();
+
             //TODO: close this screen and open the GameOverScreen
             Form1.ChangeScreen(this, new GameOverScreen());
         }

@@ -15,11 +15,14 @@ namespace SimonSays
         public MenuScreen()
         {
             InitializeComponent();
+            Form1.titleMusic.Play();
+
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
             //TODO: remove this screen and start the GameScreen
+            Form1.titleMusic.Stop();
             Form1.ChangeScreen(this, new GameScreen());
 
         }

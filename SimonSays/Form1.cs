@@ -18,15 +18,18 @@ namespace SimonSays
     {
         //TODO: create a List to store the pattern. Must be accessable on other screens
         public static List<int> pattern = new List<int>();
-         public static System.Windows.Media.MediaPlayer bgm = new System.Windows.Media.MediaPlayer();
-         
-        
+        public static System.Windows.Media.MediaPlayer bgm = new System.Windows.Media.MediaPlayer();
+        public static System.Windows.Media.MediaPlayer endingMusic = new System.Windows.Media.MediaPlayer();
+        public static System.Windows.Media.MediaPlayer titleMusic = new System.Windows.Media.MediaPlayer();
+
+
 
         public Form1()
         {
             InitializeComponent();
             bgm.Open(new Uri(Application.StartupPath + "/Resources/034 - Laser Hockey.mp3"));
-            
+            endingMusic.Open(new Uri(Application.StartupPath + "/Resources/039 - Laser Hockey - Results.mp3"));
+            titleMusic.Open(new Uri(Application.StartupPath + "/Resources/033 - Laser Hockey - Intro.mp3"));
             // bgm.Play();
             bgm.MediaEnded += new EventHandler(bgm_MediaEnded);
         }
