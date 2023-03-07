@@ -32,6 +32,7 @@ namespace SimonSays
             titleMusic.Open(new Uri(Application.StartupPath + "/Resources/033 - Laser Hockey - Intro.mp3"));
             // bgm.Play();
             bgm.MediaEnded += new EventHandler(bgm_MediaEnded);
+            titleMusic.MediaEnded += new EventHandler(bgm_MediaEnded);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,6 +65,12 @@ namespace SimonSays
         public static void bgm_MediaEnded(object sender, EventArgs e)
         {
             bgm.Stop();
+            bgm.Play();
+        }
+        public static void titleMusic_MediaEnded(object sender, EventArgs e)
+        {
+            // title theme is a short jingle, so it starts the next theme instead of looping
+            titleMusic.Stop();
             bgm.Play();
         }
     }

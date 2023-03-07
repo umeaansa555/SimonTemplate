@@ -39,6 +39,9 @@
             // yellowButton
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.yellowButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.yellowButton.FlatAppearance.BorderSize = 2;
+            this.yellowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yellowButton.Location = new System.Drawing.Point(53, 183);
             this.yellowButton.Margin = new System.Windows.Forms.Padding(4);
             this.yellowButton.Name = "yellowButton";
@@ -50,6 +53,9 @@
             // blueButton
             // 
             this.blueButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.blueButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.blueButton.FlatAppearance.BorderSize = 2;
+            this.blueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.blueButton.Location = new System.Drawing.Point(203, 183);
             this.blueButton.Margin = new System.Windows.Forms.Padding(4);
             this.blueButton.Name = "blueButton";
@@ -61,6 +67,9 @@
             // redButton
             // 
             this.redButton.BackColor = System.Drawing.Color.DarkRed;
+            this.redButton.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.redButton.FlatAppearance.BorderSize = 2;
+            this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.redButton.Location = new System.Drawing.Point(203, 46);
             this.redButton.Margin = new System.Windows.Forms.Padding(4);
             this.redButton.Name = "redButton";
@@ -72,6 +81,9 @@
             // greenButton
             // 
             this.greenButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.greenButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.greenButton.FlatAppearance.BorderSize = 2;
+            this.greenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.greenButton.Location = new System.Drawing.Point(53, 46);
             this.greenButton.Margin = new System.Windows.Forms.Padding(4);
             this.greenButton.Name = "greenButton";

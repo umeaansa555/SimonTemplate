@@ -16,7 +16,7 @@ namespace SimonSays
         {
             InitializeComponent();
             Form1.titleMusic.Play();
-
+            Form1.titleMusic.Volume = 2;
         }
 
         private void newButton_Click(object sender, EventArgs e)
